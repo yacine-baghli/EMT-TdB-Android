@@ -752,6 +752,7 @@ public class Tdb extends AppCompatActivity {
 //            }else if((VendorId == VENDOR_ID_ARDUINO_NANO) || (VendorId == VENDOR_ID_ARDUINO_MICRO) || (VendorId == VENDOR_ID_ARDUINO_UNO) || (VendorId == VENDOR_ID_EQ_ARDUINO_NANO)){
             }else{
 
+
 //                reception_esp32 =false;
 
                 tension_batterie_esp32_txt = findViewById(R.id.tension_batterie_esp32_txt);
