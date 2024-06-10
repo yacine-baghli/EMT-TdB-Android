@@ -2,7 +2,7 @@
 
 ## I - Introduction
 
-The "TdB" Android application is developed using Android Studio in Java and XML. This application consists of several screens (activities), each serving a unique purpose.
+The "TdB" Android application is developed using Android Studio in Java and XML. This application consists of several screens (activities), each serving a unique purpose. This app connects to a specific website, enabling us to track the car, monitor our performance, and replay races to analyze our energy consumption.
 
 ## I.a. - Main Activity
 
