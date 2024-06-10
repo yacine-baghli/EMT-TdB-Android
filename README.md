@@ -1,10 +1,60 @@
-The Eco Shell Marathon
-This year, I am a member of the Eco Motion Team, a team that participates annually in the Shell Marathon, organized by the company of the same name. This demanding European competition challenges students to design, build, and drive vehicles that are ultra-efficient in terms of energy. Polytech Nancy has been participating in this event for 25 years, with over 400 engineering students having already participated, often breaking numerous records. This year, I had the opportunity to join the team as a member of the continuous improvement group. My project involved designing and optimizing the dashboard of the “PolyWatt” our vehicle for the competition.
+# TdB Android Application - README
 
-My project
-My project is divided into two main parts. The first part involves designing a Joule meter to collect various vehicle data: battery voltage, energy consumption, speed, remaining laps, etc. These data will be sent via optical fiber to the dashboard, which represents the second part of my project. The dashboard is represented by an Android application that attaches to a 3D mount on the vehicle’s dashboard. This Android application, programmed in Java and XML, allows the driver to follow certain indications to optimize their runs and improve their race times. The application also enables the driver to know the vehicle’s speed by simultaneously connecting to around twenty satellites to obtain precise vehicle speed.
+## I - Introduction
 
-Additionally, the application allows the vehicle’s consumption data to be sent to the EMT website via websockets. These data are retrieved directly from the phone’s USB-C port using optical fiber communication to avoid any data loss and ensure transmission speed. The data received on the website will be used by the team to strategize and simulate different runs, as the application also provides the exact position to the website during the race. The Joule meter itself is based on an ESP32 Lolin Lite with exceptional computational speed and an external ADC allowing precise measurement of battery voltage and current passing through it. Based on this data, the vehicle’s power consumption is calculated.
+The "TdB" Android application is developed using Android Studio in Java and XML. This application consists of several screens (activities), each serving a unique purpose.
 
-Conclusion
-This project has allowed me to showcase my knowledge in electrical engineering for the data transmission part and design of the Joule meter, as well as my skills in Android application development and networking, which ensured the proper transmission of data to the website. Additionally, it showcased my skills in 3D design, as I also designed the dashboard mount and the printed circuit boards for the Joule meter.
+## I.a. - Main Activity
+
+The main activity comprises two files: `MainActivity.java` and `activity_main.xml`. The Java files handle the application’s logic, such as triggering actions upon button presses, while the XML files are used for layout design.
+
+The Main Activity serves as the main menu where users land upon opening the app. It contains various buttons that lead to other activities. These buttons are primarily `ImageView` elements, which launch new intents based on their IDs.
+
+### Key Buttons:
+- **Top Left ImageView**: Accesses the Parameters Activity.
+- **Top Right ImageView**: Accesses the Info Activity.
+- **ImageView above "Pilote" TextView**: Accesses the Dashboard Activity.
+- **ImageView above "Equipe" TextView**: Accesses the Staff Activity.
+
+## I.b. - Info Activity
+
+This activity includes a ScrollView to optimize space usage on the user interface. It provides detailed explanations about each button’s purpose, credits to graphic designers, and the context in which the application was created.
+
+### Features:
+- Enable/Disable driving assistance.
+- Show/Hide coordinates and consumption information (voltage, current, and energy).
+- Modify the visibility of communication speed and the button to change it.
+- Display data from the web database, with selected data shown on a TextView.
+- Show/Hide satellite count and output TextView for debugging purposes.
+- Adjust communication speed depending on the microcontroller used (Arduino typically at 9600 baud, ESP32 at 115200 baud).
+
+## I.c. - Parameters Activity
+
+Accessible from the Main Activity, this activity allows pre-configuring the dashboard settings. A ScrollView is used to enhance visibility and space efficiency.
+
+### Settings:
+- **Language Selection**: Change the app language. Managed by the `strings` folder, containing translations in various languages. Languages are selectable via buttons, each invoking the `setLangue` function.
+- **Total Laps Configuration**: Set the total number of laps for the pilot using a `NumberPicker`. Data is saved using `SharedPreferences` and retrieved in the Dashboard Activity.
+- **Average Speed Configuration**: Configure the average speed indicator on the dashboard.
+- **Average Deviation**: Set the deviation threshold for driving assistance to activate.
+- **Website Address**: Define the website address to which PolyWatt data is sent. This is accessed in the Staff Activity via WebView.
+
+## I.d. - Dashboard Activity
+
+This activity’s purpose and functionality are explained in detail below.
+
+### I.d.i. - UI Orientation:
+Initially designed for landscape mode, it was changed to reverse portrait due to hardware constraints. The XML code for landscape mode is commented out in `activity_tdb.xml`.
+
+### I.d.ii. - USB Connection Management:
+To use the phone’s USB-C port, user permission is required. The app retrieves the microcontroller’s Vendor ID and processes data accordingly. Data reception differs between ESP32 and Arduino Nano. The preferred data format is a series of numbers with start and end symbols. Data is displayed on the UI if the "Hide Coordinates" button is deactivated. We used the felHR85 library from GitHub for this.
+
+### I.d.iii. - GPS Data Retrieval:
+The app connects to up to 50 satellites simultaneously to obtain the vehicle's location and GPS speed. A feature to automatically increment lap counts based on GPS coordinates is being developed.
+
+### I.d.iv. - Website Connection:
+The app requires internet access permissions (found in the app’s manifest) and a network connection (WiFi or 4G) to retrieve data from the web database and send data to the website.
+
+## I.e. - Staff Activity
+
+This activity primarily consists of a WebView for direct access to the EMT website from within the mobile app.
