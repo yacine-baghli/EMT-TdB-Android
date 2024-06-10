@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pilot" translatable="true">Pilot</string>
+    <string name="staff" translatable="true">Mitarbeiter</string>
+    <string name="text_vitesse_vehicule" translatable="true">"Poly'Watt-Geschwindigkeit: "</string>
+    <string name="vitesse_vehicule" translatable="true">"km/h "</string>
+    <string name="text_graphistes" translatable="true">"Danke an Freepik, Creatype, Flat Icons, gravisio, sonnycandra, those icons   "</string>
+    <string name="langue_txt" translatable="true">Sprachen :</string>
+    <string name="texte_nbr_tour" translatable="true">Anzahl der Runden:</string>
+    <string name="texte_dernier_tour" translatable="true">"Letzte Runde ! "</string>
+    <string name="text_info" translatable="true">Diese Android-Anwendung wurde im Rahmen des EMT-Projekts entwickelt. Es dient als Armaturenbrett des Poly\'Watt und ermöglicht es dem Fahrer, die Fahrzeuggeschwindigkeit und den Batterieverbrauch in Echtzeit zu überprüfen.</string>
+    <string name="nb_tours_max_txt" translatable="true">Anzahl der zu absolvierenden Runden:</string>
+    <string name="latitude_txt">Breite :</string>
+    <string name="longitude_txt">Längengrad :</string>
+    <string name="afficher_coord">Koordinaten anzeigen</string>
+    <string name="desafficher_coord">Koordinaten ausblenden</string>
+    <string name="start_race">Starten Sie das Rennen</string>
+    <string name="end_race">Beende das Rennen</string>
+    <string name="moyenne_txt">Durchschnittsgeschwindigkeit in km/h:</string>
+    <string name="ecart_moyenne_txt">Die Abweichung vom Durchschnitt:</string>
+    <string name="text_info_start_race">Starten Sie das Rennen</string>
+    <string name="text_info_activer_color">Wegbeschreibung aktivieren</string>
+    <string name="text_info_activer_coord">Kontaktdaten anzeigen</string>
+    <string name="text_info_desactiver_color">Hinweise deaktivieren</string>
+    <string name="text_info_desactiver_coord">Kontaktdaten ausblenden</string>
+    <string name="text_info_end_race">Beende das Rennen</string>
+    <string name="nb_sat">Anzahl Satelliten:</string>
+    <string name="vitesse_communication_txt">Kommunikationsgeschwindigkeit:</string>
+    <string name="msg_notif_location">Ortungsdienste sind deaktiviert. Möchten Sie sie aktivieren?</string>
+    <string name="oui">Ja</string>
+    <string name="non">Nein</string>
+
+
+</resources>

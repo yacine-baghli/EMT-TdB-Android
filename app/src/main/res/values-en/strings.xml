@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pilot" translatable="true">Pilot</string>
+    <string name="staff" translatable="true">Staff</string>
+    <string name="text_vitesse_vehicule" translatable="true">"Poly'Watt speed : "</string>
+    <string name="vitesse_vehicule" translatable="true">"km/h  "</string>
+    <string name="text_graphistes" translatable="true">"Thanks to Freepik, Creatype, Flat Icons, gravisio, sonnycandra, those icons   "</string>
+    <string name="langue_txt" translatable="true">Languages :</string>
+    <string name="texte_nbr_tour" translatable="true">Number of laps :</string>
+    <string name="texte_dernier_tour" translatable="true">"Last lap ! "</string>
+    <string name="text_info" translatable="true">This Android application was developed as part of the EMT project.\nIt serves as the Poly\'Watt\'s dashboard, enabling the driver to check vehicle speed and battery consumption in real time. </string>
+    <string name="nb_tours_max_txt" translatable="true">Number of laps to complete :</string>
+    <string name="latitude_txt">Latitude :</string>
+    <string name="longitude_txt">Longitude :</string>
+    <string name="afficher_coord">Show coord</string>
+    <string name="desafficher_coord">Unshow coord</string>
+    <string name="start_race">Start the race</string>
+    <string name="end_race">End the race</string>
+    <string name="moyenne_txt">Average speed in km/h:</string>
+    <string name="ecart_moyenne_txt">The deviation from the average:</string>
+    <string name="text_info_start_race">Start the race</string>
+    <string name="text_info_activer_color">Enable directions</string>
+    <string name="text_info_activer_coord">Show contact details</string>
+    <string name="text_info_desactiver_color">Turn off hints</string>
+    <string name="text_info_desactiver_coord">Hide contact details</string>
+    <string name="text_info_end_race">Finish the race</string>
+    <string name="nb_sat">Number of satellites:</string>
+    <string name="vitesse_communication_txt">Communication speed:</string>
+    <string name="msg_notif_location">Location services are disabled. Do you want to enable them?</string>
+    <string name="oui">Yes</string>
+    <string name="non">No</string>
+
+
+</resources>

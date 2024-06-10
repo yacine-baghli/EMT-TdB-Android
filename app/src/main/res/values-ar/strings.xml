@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pilot" translatable="true">سائق</string>
+    <string name="staff" translatable="true">طاقم عمل</string>
+    <string name="text_vitesse_vehicule" translatable="true">"سرعة Poly'Watt: "</string>
+    <string name="vitesse_vehicule" translatable="true">"كم/ساعة "</string>
+    <string name="text_graphistes" translatable="true">" بفضل Freepik، Creatype، Flat Icons, gravisio, sonnycandra, those icons  "</string>
+    <string name="langue_txt" translatable="true">اللغات:</string>
+    <string name="texte_nbr_tour" translatable="true">عدد اللفات:</string>
+    <string name="texte_dernier_tour" translatable="true">"المرحلة الاخيرة! "</string>
+    <string name="text_info" translatable="true">تم إنشاء تطبيق Android هذا كجزء من مشروع EMT. إنه بمثابة لوحة معلومات Poly\'Watt. سيتمكن السائق من رؤية سرعة السيارة واستهلاك البطارية في الوقت الفعلي.</string>
+    <string name="nb_tours_max_txt" translatable="true">عدد اللفات التي يجب إكمالها:</string>
+    <string name="longitude_txt">خط الطول:</string>
+    <string name="latitude_txt">خط العرض:</string>
+    <string name="afficher_coord">عرض التنسيق</string>
+    <string name="desafficher_coord">عدم إظهار التنسيق</string>
+    <string name="start_race">ابدأ السباق</string>
+    <string name="end_race">انهاء السباق</string>
+    <string name="moyenne_txt">متوسط ​​السرعة بالكيلومتر/الساعة:</string>
+    <string name="ecart_moyenne_txt">الانحراف عن المتوسط:</string>
+    <string name="text_info_start_race">ابدأ السباق</string>
+    <string name="text_info_activer_color">تمكين الاتجاهات</string>
+    <string name="text_info_activer_coord">إظهار تفاصيل الاتصال</string>
+    <string name="text_info_desactiver_color">قم بإيقاف تشغيل التلميحات</string>
+    <string name="text_info_desactiver_coord">إخفاء تفاصيل الاتصال</string>
+    <string name="text_info_end_race">إنهاء السباق</string>
+    <string name="nb_sat">عدد الأقمار الصناعية:</string>
+    <string name="vitesse_communication_txt">سرعة الاتصال:</string>
+    <string name="msg_notif_location">تم تعطيل خدمات الموقع. هل تريد تمكينهم؟</string>
+    <string name="oui">نعم</string>
+    <string name="non">لا</string>
+
+
+</resources>

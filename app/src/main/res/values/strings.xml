@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name" translatable="false">TdB EMT</string>
+    <string name="developedby" translatable="false">Developed by Enicay</string>
+    <string name="version" translatable="false">Version 1.3.9</string>
+    <string name="pilot" translatable="true">Pilote</string>
+    <string name="staff" translatable="true">Equipe</string>
+    <string name="text_vitesse_vehicule" translatable="true">"Vitesse du Poly'Watt : "</string>
+    <string name="vitesse_vehicule" translatable="true">km/h </string>
+    <string name="text_graphistes" translatable="true">"Merci à Freepik, Creatype, Flat Icons, gravisio, sonnycandra, those icons   "</string>
+    <string name="langue_txt" translatable="true">Langues :</string>
+    <string name="affichage_vitesse" translatable="false">0</string>
+    <string name="nbr_lap" translatable="false">0 </string>
+    <string name="texte_nbr_tour" translatable="true">Nombre de tours :</string>
+    <string name="texte_dernier_tour">"Dernier tour ! "</string>
+    <string name="text_info" translatable="true">"Cette application Android a été réalisé dans le cadre du projet EMT. Elle sert de tableau de bord du Poly'Watt. Les données sont récupérées à partir d'un ESP32 qui joue le role d'un joule metre. Ces données vont etre récupéré sur l'application, affiché puis envoyer au site web de l'emt où elles seront archivé. L'équipe EMT pourra ainsi intéragir en temps réel avec Le/La pilote pour lui communiquer les instructions à suivre lors de la course. Le/La pilote pourra également consulter en temps réel la vitesse du véhicule ainsi que la consomation de la batterie."</string>
+    <string name="nb_tours_max_txt" translatable="true">Nombre de tours à réaliser :</string>
+    <string name="latitude_txt">Latitude :</string>
+    <string name="longitude_txt">Longitude :</string>
+    <string name="afficher_coord">Afficher coord</string>
+    <string name="desafficher_coord">Désafficher coord</string>
+    <string name="start_race">Commencer la course</string>
+    <string name="end_race">Finir la course</string>
+    <string name="moyenne_txt">Vitesse moyenne en km/h :</string>
+    <string name="ecart_moyenne_txt">L\'écart de la moyenne :</string>
+    <string name="text_info_start_race">Commencer la course  et l\'envoie des données</string>
+    <string name="text_info_activer_color">Activer les indications</string>
+    <string name="text_info_activer_coord">Afficher les coordonnées</string>
+    <string name="text_info_desactiver_color">Désactiver les indications</string>
+    <string name="text_info_desactiver_coord">Masquer les coordonnées</string>
+    <string name="text_info_end_race">Finir la course</string>
+    <string name="timer" translatable="false">00:00:00</string>
+    <string name="nb_sat">Nombre de satellites :</string>
+    <string name="vitesse_communication_txt">Vitesse com :</string>
+    <string name="msg_notif_location">Les services de localisation sont désactivés. Voulez-vous les activer?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="altitude_txt" translatable="false">Altitude</string>
+    <string name="text_info_vitesse_communication" translatable="false">Changer la vitesse de communication</string>
+    <string name="text_info_reset" translatable="false">Permet de reset le timer</string>
+    <string name="tourRestant_txt" translatable="false">Tours restant :</string>
+
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pilot" translatable="true">Piloto</string>
+    <string name="staff" translatable="true">Personal</string>
+    <string name="text_vitesse_vehicule" translatable="true">"Velocidad Poly'Watt "</string>
+    <string name="vitesse_vehicule" translatable="true">"km/h "</string>
+    <string name="text_graphistes" translatable="true">"Gracias a Freepik, Creatype, Flat Icons, gravisio, sonnycandra, those icons   "</string>
+    <string name="langue_txt" translatable="true">Idiomas :</string>
+    <string name="texte_nbr_tour" translatable="true">Número de vueltas:</string>
+    <string name="texte_dernier_tour" translatable="true">"Última vuelta ! "</string>
+    <string name="text_info" translatable="true">Esta aplicación para Android fue desarrollada como parte del proyecto EMT. Sirve como panel de control de Poly\'Watt, lo que permite al conductor comprobar la velocidad del vehículo y el consumo de batería en tiempo real.</string>
+    <string name="nb_tours_max_txt" translatable="true">Number of laps to complete :</string>
+    <string name="longitude_txt">Longitud:</string>
+    <string name="latitude_txt">Latitud:</string>
+    <string name="afficher_coord">mostrar coordinación</string>
+    <string name="desafficher_coord">coordinar no mostrar</string>
+    <string name="start_race">Empezar la carrera</string>
+    <string name="end_race">Terminar la carrera</string>
+    <string name="moyenne_txt">Velocidad media en km/h:</string>
+    <string name="ecart_moyenne_txt">La desviación del promedio:</string>
+    <string name="text_info_start_race">Empezar la carrera</string>
+    <string name="text_info_activer_color">Habilitar direcciones</string>
+    <string name="text_info_activer_coord">Mostrar datos de contacto</string>
+    <string name="text_info_desactiver_color">Desactivar pistas</string>
+    <string name="text_info_desactiver_coord">Ocultar datos de contacto</string>
+    <string name="text_info_end_race">Terminar la carrera</string>
+    <string name="nb_sat">Número de satélites:</string>
+    <string name="vitesse_communication_txt">Velocidad de comunicación:</string>
+    <string name="msg_notif_location">Los servicios de ubicación están deshabilitados. ¿Quieres habilitarlos?</string>
+    <string name="oui">Sí</string>
+    <string name="non">No</string>
+
+
+</resources>

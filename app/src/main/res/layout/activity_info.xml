@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="15dp"
+    tools:context=".Info">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_accueil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Parametre"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_parametre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home"
+            tools:ignore="MissingConstraints">
+
+            <ScrollView
+                android:id="@+id/SCROLLER_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+
+
+                android:paddingTop="20dp"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/EMTWebSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/primary"
+                        android:text="@string/app_name"
+                        android:textColor="@color/secondary"
+                        android:textSize="60sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                        tools:ignore="NotSibling" />
+
+
+                    <TextView
+                        android:id="@+id/txt_info_suite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Voici à quoi sert chaque bouton :"
+                        android:textSize="23dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_info" />
+
+                    <TextView
+                        android:id="@+id/text_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="10dp"
+                        android:scrollbars="vertical"
+                        android:text="@string/text_info"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/EMTWebSite" />
+
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_info_suite">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_afficher_color"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/afficher_color" />
+
+                            <TextView
+                                android:id="@+id/text_info_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_desactiver_color"
+                                android:textSize="23sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_coord"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/afficher_coord" />
+
+                            <TextView
+                                android:id="@+id/text_info_coord"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_activer_coord"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="-20dp">
+
+                            <ImageView
+                                android:id="@+id/ic_info_start_race"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/start_race" />
+
+                            <TextView
+                                android:id="@+id/text_info_start_race"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_start_race"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_desactiver_coord"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/desafficher_coord" />
+
+                            <TextView
+                                android:id="@+id/text_info_desactiver_coord"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_desactiver_coord"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_desactiver_color"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/desactiver_color" />
+
+                            <TextView
+                                android:id="@+id/text_info_desactiver_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_activer_color"
+                                android:textSize="23sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_end_race"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/end_race" />
+
+                            <TextView
+                                android:id="@+id/text_info_end_race"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_end_race"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ic_info_reset"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/reset" />
+
+                            <TextView
+                                android:id="@+id/text_info_reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_reset"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_info_vitesse_communication"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_column="0"
+                                android:layout_gravity="center"
+                                android:background="@color/primary"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/vitesse_communication" />
+
+                            <TextView
+                                android:id="@+id/text_info_vitesse_communication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="@string/text_info_vitesse_communication"
+                                android:textSize="23sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/text_graphistes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:paddingLeft="10dp"
+                        android:text="@string/text_graphistes"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tableLayout" />
+
+                    <TextView
+                        android:id="@+id/Developedby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/primary"
+                        android:text="@string/developedby"
+                        android:textColor="#A7A7A7"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_graphistes" />
+
+                    <TextView
+                        android:id="@+id/Version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary"
+                        android:text="@string/version"
+                        android:textColor="@color/tertiary"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Developedby" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

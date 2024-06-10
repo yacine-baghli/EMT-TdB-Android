@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="5dp"
+    tools:context=".Tdb">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/Parametre"-->
+        <!--            android:layout_width="40sp"-->
+        <!--            android:layout_height="40sp"-->
+        <!--            android:background="@color/primary"-->
+        <!--            android:scaleType="centerInside"-->
+        <!--            android:src="@drawable/ic_parametre"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/Info"-->
+        <!--            android:layout_width="40sp"-->
+        <!--            android:layout_height="40sp"-->
+        <!--            android:layout_marginEnd="24dp"-->
+        <!--            android:background="@color/primary"-->
+        <!--            android:scaleType="centerInside"-->
+        <!--            android:src="@drawable/ic_info"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/Parametre"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <ImageButton
+            android:id="@+id/afficher_coord"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/desafficher_coord"
+            app:layout_constraintEnd_toStartOf="@+id/afficher_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/button_vitesse_comunnication"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/vitesse_communication"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/afficher_color"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/desactiver_color"
+            app:layout_constraintEnd_toStartOf="@+id/resetButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/tour_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vitesse_vehicule" />
+
+        <Button
+            android:id="@+id/tour_moins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vitesse_vehicule" />
+
+        <TextView
+            android:id="@+id/latitude_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Latitude :"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tour_moins"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/nb_sat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nbr sat :"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/releve" />
+
+        <TextView
+            android:id="@+id/longitude_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude :"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latitude_txt" />
+
+        <TextView
+            android:id="@+id/altitude_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altitude :"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/longitude_txt" />
+
+        <TextView
+            android:id="@+id/vitesse_communication_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vitesse de communication :"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/texte_nbr_tour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/start_sending" />
+
+        <TextView
+            android:id="@+id/text_vitesse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:gravity="start"
+            android:text="@string/text_vitesse_vehicule"
+            android:textColor="@color/secondary"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
+
+        <TextView
+            android:id="@+id/text_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:gravity="start"
+            android:text="$sp.00 Vx.xxx Ix.xxx*"
+            android:textColor="@color/secondary"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/vitesse_vehicule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energie_esp32_txt" />
+
+        <TextView
+            android:id="@+id/km_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-24dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/primary"
+            android:gravity="start"
+            android:text="km/h "
+            android:textColor="@color/secondary"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vitesse_vehicule"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:gravity="start"
+            android:text="@string/timer"
+            android:textColor="@color/secondary"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_releve" />
+
+        <TextView
+            android:id="@+id/vitesse_vehicule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:gravity="start"
+            android:text="@string/vitesse_vehicule"
+            android:textColor="@color/secondary"
+            android:textSize="160dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/texte_nbr_tour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:gravity="start"
+            android:text="@string/texte_nbr_tour"
+            android:textColor="@color/secondary"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/lapCounterTextView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/lapCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:gravity="start"
+            android:text="@string/nbr_lap"
+            android:textColor="@color/secondary"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/texte_dernier_tour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:fontFamily="@font/police_7"
+            android:text="@string/texte_dernier_tour"
+            android:textColor="#C70039"
+            android:textSize="40dp"
+            android:textStyle="bold|italic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/start_race"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/start_race"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/resetButton"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/reset"
+            app:layout_constraintEnd_toStartOf="@+id/start_race"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/courant_batterie_esp32_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="courant_batterie_esp32"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tension_batterie_esp32_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tension_batterie_esp32_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="tension_batterie_esp32_txt"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/courant_batterie_esp32_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_vitesse" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/secondes_esp32_txt"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:text="Timer_esp32"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/tour_moins" />-->
+
+        <Button
+            android:id="@+id/start_sending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start sending"
+            app:layout_constraintBottom_toBottomOf="@+id/tour_plus"
+            app:layout_constraintEnd_toStartOf="@+id/tour_plus"
+            app:layout_constraintStart_toEndOf="@+id/tour_moins"
+            app:layout_constraintTop_toTopOf="@+id/tour_plus" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tourRestant_txt"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:visibility="invisible"-->
+        <!--            android:text="Tours restant :"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/texte_nbr_tour"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/start_sending" />-->
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Output :"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/energie_esp32_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="energie_esp32"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courant_batterie_esp32_txt"
+            app:layout_constraintTop_toTopOf="@+id/tension_batterie_esp32_txt" />
+
+        <TextView
+            android:id="@+id/releve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/altitude_txt" />
+
+        <Spinner
+            android:id="@+id/sp_releve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afficher_color" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/secondes_esp32_txt"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="TextView"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/nb_sat_txt" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tension_batterie_esp32_txt"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="TextView"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/secondes_esp32_txt" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/courant_batterie_esp32_txt"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="TextView"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tension_batterie_esp32_txt" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/primary"-->
+<!--    android:padding="5dp"-->
+<!--    tools:context=".Tdb">-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraint_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0">-->
+
+<!--        &lt;!&ndash;        <ImageButton&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/Parametre"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="40sp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="40sp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:background="@color/primary"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:scaleType="centerInside"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:src="@drawable/ic_parametre"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <ImageButton&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/Info"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="40sp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="40sp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginEnd="24dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:background="@color/primary"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:scaleType="centerInside"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:src="@drawable/ic_info"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toStartOf="@+id/Parametre"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/afficher_coord"-->
+<!--            android:layout_width="40sp"-->
+<!--            android:layout_height="40sp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/desafficher_coord"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/afficher_color"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/button_vitesse_comunnication"-->
+<!--            android:layout_width="38dp"-->
+<!--            android:layout_height="44dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/vitesse_communication"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/releve"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tour_moins" />-->
+
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/afficher_color"-->
+<!--            android:layout_width="40sp"-->
+<!--            android:layout_height="40sp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/desactiver_color"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/resetButton"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/tour_plus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:text="+"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="40dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_vitesse" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/tour_moins"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:text="-"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="40dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_vitesse" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/latitude_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Latitude :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/longitude_txt"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_vitesse"-->
+<!--            tools:visibility="invisible" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/nb_sat_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="Nbr sat :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/afficher_coord"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/text_vitesse"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/longitude_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Longitude :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tour_moins"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_vitesse" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/altitude_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Altitude :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tour_moins"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/longitude_txt" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/vitesse_communication_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Vitesse de communication :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/start_sending"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/texte_dernier_tour" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_vitesse"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:gravity="start"-->
+<!--            android:text="@string/text_vitesse_vehicule"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_Data"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/primary"-->
+<!--            android:gravity="start"-->
+<!--            android:text="$sp.00 Vx.xxx Ix.xxx*"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="18dp"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tour_plus"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/afficher_color" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/km_h"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="-16dp"-->
+<!--            android:layout_marginTop="90dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:gravity="start"-->
+<!--            android:text="km/h "-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/vitesse_vehicule"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/timerTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:gravity="start"-->
+<!--            android:text="@string/timer"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="50dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tension_batterie_esp32_txt"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tour_moins" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/vitesse_vehicule"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:gravity="start"-->
+<!--            android:text="@string/vitesse_vehicule"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="160dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_vitesse" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/texte_nbr_tour"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:gravity="start"-->
+<!--            android:text="@string/texte_nbr_tour"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/lapCounterTextView"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/lapCounterTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:gravity="start"-->
+<!--            android:text="@string/nbr_lap"-->
+<!--            android:textColor="@color/secondary"-->
+<!--            android:textSize="70dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/texte_dernier_tour"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:fontFamily="@font/police_7"-->
+<!--            android:text="@string/texte_dernier_tour"-->
+<!--            android:textColor="#C70039"-->
+<!--            android:textSize="70dp"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/start_race"-->
+<!--            android:layout_width="40sp"-->
+<!--            android:layout_height="40sp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/start_race"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/resetButton"-->
+<!--            android:layout_width="40sp"-->
+<!--            android:layout_height="40sp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:background="@color/primary"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/reset"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/start_race"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/courant_batterie_esp32_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="19dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="courant_batterie_esp32"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tension_batterie_esp32_txt"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tension_batterie_esp32_txt" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tension_batterie_esp32_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="tension_batterie_esp32_txt"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tour_moins" />-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/secondes_esp32_txt"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginBottom="8dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="Timer_esp32"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toEndOf="@+id/tour_moins" />&ndash;&gt;-->
+
+<!--        <Button-->
+<!--            android:id="@+id/start_sending"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Start sending"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/lapCounterTextView"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/texte_dernier_tour" />-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/tourRestant_txt"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:visibility="invisible"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="Tours restant :"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/texte_nbr_tour"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/start_sending" />&ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/output"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Output :"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/energie_esp32_txt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="energie_esp32"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/texte_dernier_tour"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/courant_batterie_esp32_txt" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/releve"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="TextView"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tour_moins"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tour_moins" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/sp_releve"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/vitesse_vehicule"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/afficher_coord" />-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/secondes_esp32_txt"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="TextView"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/nb_sat_txt" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/tension_batterie_esp32_txt"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="TextView"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/secondes_esp32_txt" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/courant_batterie_esp32_txt"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="TextView"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/tension_batterie_esp32_txt" />&ndash;&gt;-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="20dp"
+    tools:context=".Parametre">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_accueil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Info"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@color/primary"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/EMTWebSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="@string/app_name"
+                android:textColor="@color/secondary"
+                android:textSize="40sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_anglais"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Anglais"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Langue_txt" />
+
+            <Button
+                android:id="@+id/button_arabe"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Arabe"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_anglais" />
+
+            <Button
+                android:id="@+id/button_espagnol"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Espagnol"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_allemand" />
+
+            <Button
+                android:id="@+id/button_allemand"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Allemand"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_arabe" />
+
+            <Button
+                android:id="@+id/button_francais"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Français"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_espagnol" />
+
+            <TextView
+                android:id="@+id/Langue_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/primary"
+                android:text="@string/langue_txt"
+                android:textColor="@color/secondary"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EMTWebSite" />
+
+            <TextView
+                android:id="@+id/Developedby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/primary"
+                android:text="@string/developedby"
+                android:textColor="#A7A7A7"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_editText" />
+
+            <TextView
+                android:id="@+id/Version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/primary"
+                android:text="@string/version"
+                android:textColor="@color/tertiary"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_editText" />
+
+
+            <TextView
+                android:id="@+id/Nb_tours_max_txt"
+                android:layout_width="255dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary"
+                android:text="@string/nb_tours_max_txt"
+                android:textColor="@color/secondary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tours_max"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tours_max" />
+
+            <NumberPicker
+                android:id="@+id/tours_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_francais" />
+
+            <TextView
+                android:id="@+id/moyenne_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary"
+                android:text="@string/moyenne_txt"
+                android:textColor="@color/secondary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/moyenne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/moyenne" />
+
+            <NumberPicker
+                android:id="@+id/moyenne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tours_max" />
+
+            <TextView
+                android:id="@+id/ecart_moyenne_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary"
+                android:text="@string/ecart_moyenne_txt"
+                android:textColor="@color/secondary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ecart_moyenne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ecart_moyenne" />
+
+            <NumberPicker
+                android:id="@+id/ecart_moyenne"
+                android:layout_width="64dp"
+                android:layout_height="191dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moyenne" />
+
+            <EditText
+                android:id="@+id/url_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="server url : "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ecart_moyenne" />
+
+
+            <!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar_moyenne"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:max="40"-->
+<!--                    android:min="0"-->
+<!--                    android:scaleX="1.5"-->
+<!--                    android:scaleY="1.5"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/moyenne_txt"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/moyenne_txt"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/moyenne_txt" />-->
+
+<!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar_ecart_moyenne"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:max="20"-->
+<!--                    android:min="0"-->
+<!--                    android:scaleX="1.5"-->
+<!--                    android:scaleY="1.5"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/ecart_moyenne_txt"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/seekBar_moyenne"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/seekBar_moyenne"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/ecart_moyenne_txt" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_seekbar_moyenne"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/seekBar_moyenne"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/seekBar_moyenne"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/seekBar_moyenne" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_seekbar_ecart_moyenne"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/seekBar_ecart_moyenne"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/seekBar_ecart_moyenne"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/seekBar_ecart_moyenne" />-->
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/moyenne"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:digits="0123456789"-->
+            <!--        android:hint="Enter an integer"-->
+            <!--        android:inputType="number"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintStart_toEndOf="@+id/moyenne_txt"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/button_francais" />-->
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/ecart_vitesse_moyenne"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:digits="0123456789"-->
+            <!--        android:hint="Enter an integer"-->
+            <!--        android:inputType="number"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintStart_toEndOf="@+id/ecart_moyenne_txt"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/moyenne_txt" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
